@@ -17,8 +17,8 @@ class DatabaseSeeder extends Seeder
     	$admin->password =  bcrypt('password');
     	$admin->visible_password ="password";
     	$admin->email_verified_at = NOW();
-    	$admin->occupation="CEO";
-    	$admin->address="Australia";
+    	$admin->occupation="Software Engineer";
+    	$admin->address="United States";
     	$admin->phone="03453494";
     	$admin->is_admin=1;
     	$admin->save();

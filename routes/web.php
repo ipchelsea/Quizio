@@ -4,13 +4,23 @@ Route::get('/', function () {
     return view('admin.index');
 });
 
-Auth::routes();
+Auth::routes([
+
+	'register'=>false,
+	'reset'=>false,
+	'verify'=>false
+]);
+Route::group(['middleware'=>'isAdmin'],function(){
+	Route::get('/', function () {
+    return view('admin.index');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('quiz','QuizController');
 Route::resource('question','QuestionController');
 Route::get('/quiz/{id}/questions','QuizController@question')->name('quiz.question');
-
+Route::resource('user','UserController');
+});
 
 /*
 |--------------------------------------------------------------------------
