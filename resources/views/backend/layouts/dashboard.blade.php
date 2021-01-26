@@ -1,28 +1,17 @@
- <div class="span9">
+                <!--/.span3-->
+                <div class="span9">
                         <div class="content">
                             <div class="btn-controls">
                                 <div class="btn-box-row row-fluid">
-                                    <a href="#" class="btn-box big span4"><i class=" icon-random"></i>
-                                        <b>
-                                            {{App\Quiz::count()}}
-                                       
-                                    </b>
+                                    <a href="#" class="btn-box big span4"><i class=" icon-random"></i><b>65%</b>
                                         <p class="text-muted">
-                                            
-                                        Quiz</p>
-                                    </a><a href="#" class="btn-box big span4"><i class="icon-user"></i><b>
-                                        {{App\User::where('is_admin',0)->count()}}
-                                        
-                                    </b>
+                                            Growth</p>
+                                    </a><a href="#" class="btn-box big span4"><i class="icon-user"></i><b>15</b>
                                         <p class="text-muted">
-                                             Users</p>
-                                    </a><a href="#" class="btn-box big span4"><i class="icon-money"></i><b>
-                                        {{App\Question::count()}}
-                                            
-                                    </b>
+                                            New Users</p>
+                                    </a><a href="#" class="btn-box big span4"><i class="icon-money"></i><b>15,152</b>
                                         <p class="text-muted">
-                                            
-                                        Questions</p>
+                                            Profit</p>
                                     </a>
                                 </div>
                                 <div class="btn-box-row row-fluid">
