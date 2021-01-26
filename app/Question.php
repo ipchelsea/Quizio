@@ -20,7 +20,6 @@ class Question extends Model
     	return $this->belongsTo(Quiz::class);
     }
 
-
     public function storeQuestion($data){
     	$data['quiz_id'] = $data['quiz'];
     	return Question::create($data);

@@ -18,7 +18,7 @@
 			
 	<div class="module">
             <div class="module-head">
-                <h3>Create Question</h3>
+                <h3>Create Quiz</h3>
             </div>
 
 
@@ -70,14 +70,6 @@
 			@enderror      
 
 			</div>
-
-
-			
-
-
-
-
-			
 
 
 			<div class="control-group">
