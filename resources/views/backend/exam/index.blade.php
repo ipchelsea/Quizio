@@ -12,7 +12,7 @@
      					@endif
                         <div class="module">
                             <div class="module-head">
-                                <h3>User Exam</h3>
+                                <h3>User Quiz</h3>
                             </div>
 
                             <div class="module-body">
@@ -50,9 +50,6 @@
 									  	</form>
 									  </td>
 									  
-									  									 
-
-									 
 									  
 									</tr>
 									@endforeach
