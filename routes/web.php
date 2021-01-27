@@ -11,10 +11,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('quiz/{quizId}', 'ExamController@getQuizQuestions')->middleware('auth');
 
-Route::get('user/quiz/{quizId}','ExamController@getQuizQuestions');
-
-
 Route::post('quiz/create','ExamController@postQuiz')->middleware('auth');
+
+Route::get('user/quiz/{quizId}','ExamController@getQuizQuestions');
 
 Route::get('/result/user/{userId}/quiz/{quizId}','ExamController@viewResult')->middleware('auth');
 

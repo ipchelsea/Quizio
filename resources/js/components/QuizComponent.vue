@@ -32,7 +32,7 @@
                       </div>
                        <div v-show="questionIndex!=questions.length">
                            <button class="btn btn-success float-right" @click="prev">Prev</button>
-                            <button class="btn btn-success" @click="next">Next</button>
+                           <button class="btn btn-success" @click="next();postuserChoice()">Next</button>
 
                        </div>
 
