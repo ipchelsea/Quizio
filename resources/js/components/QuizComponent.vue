@@ -9,6 +9,7 @@
                     </div>
     
                     <div class="card-body">
+                
                         <div v-for="(question,index) in questions">
                             <div v-show="index===questionIndex">
                             {{question.question}}
@@ -20,6 +21,7 @@
                                     :name="index"
                                     v-model="userResponses[index]"
                                     @click="choices(question.id,choice.id)"
+                                    
                                     
                                     
                                     >
@@ -64,29 +66,14 @@
                 userResponses:Array(this.quizQuestions.length).fill(false),
                 currentQuestion:0,
                 currentAnswer:0,
-                clock: moment(this.times*60 * 1000),
-
+                
                 
 
             }
         },
-
         mounted() {
-            setInterval(() => {
-            this.clock = moment(this.clock.subtract(1, 'seconds'))
-            }, 1000);
-  
+            console.log('Component mounted.')
         },
-            computed: {
-                time: function(){
-                var minsec=this.clock.format('mm:ss');
-                if(minsec=='00:00'){
-                    alert('timeout')
-                    window.location.reload();      
-                }
-                    return minsec
-            }
-        }
         methods:{
             next(){
                 this.questionIndex++;

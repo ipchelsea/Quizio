@@ -103,12 +103,12 @@ class ExamController extends Controller
         $userWrongAnswer = $totalQuestions-$userCorrectedAnswer;
         if($attemptQuestion){
             $percentage = ($userCorrectedAnswer/$totalQuestions)*100;
-        }else{
-            $percentage=0;
         }
+        else{
+            $percentage=0;
+        }  
        
-
-        return view('backend.result.result',compact('user','results','totalQuestions','attemptQuestion','userCorrectedAnswer','userWrongAnswer','percentage','quiz'));
+        return view('backend.result.result',compact('results','totalQuestions','attemptQuestion','userCorrectedAnswer','userWrongAnswer','percentage', 'quiz'));
     }
 
 

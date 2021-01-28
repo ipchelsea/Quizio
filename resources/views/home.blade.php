@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center ">
+    <div class="row">
        
     	<div class="col-md-8">
             @if(Session::has('error'))
@@ -21,7 +21,7 @@
                     <p>Number of questions: {{$quiz->questions->count()}}</p>
                     <p>
                         @if(!in_array($quiz->id,$wasQuizCompleted))
-                        <a href="/quiz/{{$quiz->id}}">
+                        <a href="user/quiz/{{$quiz->id}}">
                             <button class="btn btn-success">Start Quiz</button>
                         </a>
                         @else
@@ -37,6 +37,17 @@
                 @else
                     <p>You have not been assigned a quiz!</p>
                 @endif
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class ="card-header">User Profile</div>
+                <div class="card-body">
+                    <p>Email: {{auth()->user()->email}}</p>
+                    <p>Occupation: {{auth()->user()->occupation}}</p>
+                    <p>Address: {{auth()->user()->address}}</p>
+                    <p>Phone: {{auth()->user()->phone}}</p>
+              
             </div>
         </div>
     </div>

@@ -42,14 +42,13 @@
 									  </td>
 
 									  <td>
-									  	<a href="result/{{$user->id}}/{{$quiz->id}}">
-									  		<button class="btn btn-primary">View Result</button>
-									  	</a>
+									  	<a href="result/{{$user->id}}/{{$quiz->id">
+										  <button class="btn btn-primary">
+										  View Result</button>
+										  </a>
+
 									  </td>
 									  
-									  									 
-
-									 
 									  
 									</tr>
 									@endforeach
