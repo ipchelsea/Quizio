@@ -22,7 +22,6 @@
                                     @click="choices(question.id,choice.id)"
                                     
                                     
-                                    
                                     >
                                     {{choice.answer}}
                                 </label>
@@ -65,14 +64,29 @@
                 userResponses:Array(this.quizQuestions.length).fill(false),
                 currentQuestion:0,
                 currentAnswer:0,
-                
+                clock: moment(this.times*60 * 1000),
+
                 
 
             }
         },
+
         mounted() {
-            console.log('Component mounted.')
+            setInterval(() => {
+            this.clock = moment(this.clock.subtract(1, 'seconds'))
+            }, 1000);
+  
         },
+            computed: {
+                time: function(){
+                var minsec=this.clock.format('mm:ss');
+                if(minsec=='00:00'){
+                    alert('timeout')
+                    window.location.reload();      
+                }
+                    return minsec
+            }
+        }
         methods:{
             next(){
                 this.questionIndex++;
