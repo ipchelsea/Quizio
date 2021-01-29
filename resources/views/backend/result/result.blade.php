@@ -8,7 +8,7 @@
                     	
                         <div class="module">
                             <div class="module-head">
-                                <h3>All Quiz</h3>
+                                <h3>Result</h3>
                             </div>
 
                             <div class="module-body">
@@ -30,9 +30,35 @@
 										<td>1</td>
 										<td>{{$q->name}}</td>
 										<td>{{$totalQuestions}}</td>
-										<td>{{$attemptQuestions}}</td>
+										<td>{{$attemptQuestion}}</td>
 										<td>{{$userCorrectedAnswer}}</td>
 										<td>{{$percentage}}</td>
+									</tr>
+									@endforeach
+								
+								  </tbody>
+								</table>
+								<table class="table table-striped">
+								  <thead>
+									<tr>
+										<th>#</th>
+										<th>Question</th>
+										<th>Answer Given</th>
+										<th>Result</th>
+									
+									</tr>
+								  </thead>
+								  <tbody>
+								  @foreach($results as $key=>$result)
+									<tr>
+										<td>{{$key+1}}</td>
+										<td>{{$result->question->question}}</td>
+										<td>{{$result->answer->answer}}</td>
+										@if ($result->answer->is_correct)
+										<td>Correct</td>
+										@else
+										<td>Incorrect</td>
+										@endif
 									</tr>
 									@endforeach
 								

@@ -42,7 +42,7 @@
 									  </td>
 
 									  <td>
-									  	<a href="result/{{$user->id}}/{{$quiz->id">
+									  	<a href="result/{{$user->id}}/{{$quiz->id}}">
 										  <button class="btn btn-primary">
 										  View Result</button>
 										  </a>

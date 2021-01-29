@@ -6,16 +6,16 @@ Auth::routes([
 	'reset' => false,
 	'verify' => false
 ]);
-
+Route::resource('quiz', 'QuizController');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('quiz/{quizId}', 'ExamController@getQuizQuestions')->middleware('auth');
 
-Route::post('quiz/create', 'ExamController@postQuiz')->middleware('auth');
+Route::post('quiz/create','ExamController@postQuiz')->middleware('auth');
 
-Route::get('user/quiz/{quizId}', 'ExamController@getQuizQuestions');
+Route::get('user/quiz/{quizId}','ExamController@getQuizQuestions')->name('results');
 
-Route::get('/result/user/{userId}/quiz/{quizId}', 'ExamController@viewResult')->middleware('auth');
+Route::get('/result/user/{userId}/quiz/{quizId}','ExamController@viewResult')->middleware('auth');
 
 
 Route::group(['middleware' => 'isAdmin'], function () {
@@ -23,7 +23,7 @@ Route::group(['middleware' => 'isAdmin'], function () {
 		return view('admin.index');
 	});
 
-	Route::resource('quiz', 'QuizController');
+
 	Route::resource('question', 'QuestionController');
 	Route::resource('user', 'UserController');
 
