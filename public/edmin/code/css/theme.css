@@ -7,9 +7,10 @@ All Rights Reserved.
 */
 
 body {
-	font-size: 13px;
+	font-size: 15px;
 	font-family: 'Open Sans', Arial, sans-serif;
 	background: #fff;
+	font-weight: bold;
 	color: #777
 }
 h1, h2, h3, h4, h5, h6 {
@@ -369,7 +370,7 @@ box-shadow: 0 1px 1px rgba(0,0,0,.05);
 	font-size: 36px;
 	line-height: 36px;
 	height: 36px;
-	color: #29b7d3;
+	color: #f89406;
 	-webkit-transition: all .2s ease-in-out;
 -moz-transition: all .2s ease-in-out;
 transition: all .2s ease-in-out;
@@ -925,11 +926,11 @@ transition: all .2s ease-in-out;
 	background: #d74f2a
 }
 .widget-menu>li+li {
-	border-top: 1px solid #555
+	border-top: 3px solid rgb(219, 219, 219)
 }
 .widget-menu>li>a {
-	background-color: #2d2b32;
-	color: #767676;
+	background-color: #f7d19d;
+	color: rgb(0, 0, 0);
 	-webkit-transition: all .2s ease-in-out;
 -moz-transition: all .2s ease-in-out;
 transition: all .2s ease-in-out;

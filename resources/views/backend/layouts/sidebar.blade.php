@@ -35,6 +35,7 @@
                                     </b> </a></li>
                             </ul>
                             
+
                       
                             <!--/.widget-nav-->
                             <ul class="widget widget-menu unstyled">
@@ -45,7 +46,7 @@
                                     <li><a href="{{route('result')}}"><i class="menu-icon icon-bullhorn"></i>View Result </a>
                                         </li>
                                 </ul>
-                                <li>
+                            
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -57,6 +58,7 @@
                                     </form>
                                 </li>
                             </ul>
+                        </ul>
                         </div>
                         <!--/.sidebar-->
                     </div>
