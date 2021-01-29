@@ -17,11 +17,11 @@
 									<tr>
 										<th>#</th>
 										<th>Test</th>
-										<th>Total Question</th>
+										<th>Total Questions</th>
 										<th>Attempt Question</th>
 										<th>Correct Answer</th>
 										<th>Incorrect Answer</th>
-										<th>Percentages</th>
+										<th>Percentage Correct</th>
 									</tr>
 								  </thead>
 								  <tbody>
@@ -32,12 +32,15 @@
 										<td>{{$totalQuestions}}</td>
 										<td>{{$attemptQuestion}}</td>
 										<td>{{$userCorrectedAnswer}}</td>
-										<td>{{$percentage}}</td>
+										<td>{{$userWrongAnswer}}</td>
+										<td>{{round($percentage,2)}}%</td>
 									</tr>
 									@endforeach
 								
 								  </tbody>
 								</table>
+
+								<br></br>
 								<table class="table table-striped">
 								  <thead>
 									<tr>
